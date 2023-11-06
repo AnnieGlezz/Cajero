@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cajero Automático</title>
+  <link rel="stylesheet" href="cajero.css">
+  
+</head>
+<body>
+  <h1>Cajero Automático</h1>
+  <div id="loginSection" class="section">
+    <label for="cuenta">Selecciona una cuenta:</label>
+    <select id="cuenta">
+      <option value="0">Persona 1</option>
+      <option value="1">Persona 2</option>
+      <option value="2">Persona 3</option>
+    </select>
+    <br>
+    <label for="password">Introduce tu contraseña:</label>
+    <input type="password" id="password" placeholder="Contraseña">
+    <button id="loginButton">Ingresar</button>
+    <div id="mensaje" class="error" style="display: none;"></div>
+  </div>
+  <div id="opciones" class="section">
+    <button id="consultarSaldoButton">Consultar Saldo</button>
+    <button id="ingresarMontoButton">Ingresar Monto</button>
+    <button id="retirarMontoButton">Retirar Monto</button>
+    <button id="salirButton">Salir</button> 
+  </div>
+  <div id="saldo" class="section" style="display: none;"></div>
+  <form id="montoForm" class="section" style="display: none;">
+    <label for="monto">Introduce el monto:</label>
+    <input type="number" id="monto" placeholder="Monto" step="0.01" min="0">
+    <button type="button" id="confirmMontoButton">Confirmar</button> 
+  </form>
+   <script src="cajero.js"></script>
+</body>
+</html>
